@@ -637,8 +637,8 @@ func (rpc *FlashbotsRPC) FlashbotsSendBundle(privKey *ecdsa.PrivateKey, param Fl
 	return res, err
 }
 
-func (rpc *FlashbotsRPC) FlashbotsGetBundleStats(privKey *ecdsa.PrivateKey, param FlashbotsGetBundleStatsParam) (res FlashbotsGetBundleStatsResponse, err error) {
-	rawMsg, err := rpc.CallWithFlashbotsSignature("flashbots_getBundleStats", privKey, param)
+func (rpc *FlashbotsRPC) FlashbotsGetBundleStats(privKey *ecdsa.PrivateKey, param FlashbotsGetBundleStatsParam) (res FlashbotsGetBundleStatsV2Response, err error) {
+	rawMsg, err := rpc.CallWithFlashbotsSignature("flashbots_getBundleStatsV2", privKey, param)
 	if err != nil {
 		return res, err
 	}

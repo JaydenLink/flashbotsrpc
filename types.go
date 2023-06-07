@@ -391,13 +391,11 @@ type FlashbotsGetBundleStatsParam struct {
 	BundleHash  string `json:"bundleHash"`  // String, returned by the flashbots api when calling eth_sendBundle
 }
 
-type FlashbotsGetBundleStatsResponse struct {
+type FlashbotsGetBundleStatsV2Response struct {
 	IsSimulated            bool                          `json:"isSimulated"`
-	IsSentToMiners         bool                          `json:"isSentToMiners"`
 	IsHighPriority         bool                          `json:"isHighPriority"`
 	SimulatedAt            time.Time                     `json:"simulatedAt"`
-	SubmittedAt            time.Time                     `json:"submittedAt"`
-	SentToMinersAt         time.Time                     `json:"sentToMinersAt"`
+	ReceivedAt             time.Time                     `json:"receivedAt"`
 	ConsideredByBuildersAt []*BuilderPubkeyWithTimestamp `json:"consideredByBuildersAt"`
 	SealedByBuildersAt     []*BuilderPubkeyWithTimestamp `json:"sealedByBuildersAt"`
 }
