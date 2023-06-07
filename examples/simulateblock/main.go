@@ -9,11 +9,11 @@ import (
 	"os"
 	"time"
 
+	"github.com/JaydenLink/flashbotsrpc"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/go-ethereum/crypto"
 	"github.com/ethereum/go-ethereum/ethclient"
-	"github.com/metachris/flashbotsrpc"
 )
 
 func main() {
